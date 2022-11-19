@@ -1,0 +1,23 @@
+.direction {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.direction-item {
+  position: relative;
+}
+
+.direction-list {
+  display: flex;
+  gap: 30px;
+}
+
+.direction-title {
+  background: var(--direction-background-color);
+  @include placing(flex, center, center);
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}

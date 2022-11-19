@@ -1,0 +1,91 @@
+.projects-filter {
+  @include placing(flex, center, null);
+  margin-bottom: 50px;
+}
+
+.filter-btn {
+  @include font(16, 1.62, 500, 0.03);
+  background-color: var(--btn-background-color);
+  color: var(--main-btn-text-color);
+  border: 0;
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--active-btn-text-color);
+    background-color: var(--active-btn-background-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.filter-item {
+  margin-left: 8px;
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.project-item {
+  width: calc((100% - 30px * 2) / 3);
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-container {
+  padding: 20px 24px;
+  border: 1px solid var(--card-border);
+  border-top: 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.project-item .hover-img-text {
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-img-text {
+  position: absolute;
+  bottom: 0;
+
+  @include font(18, 1.56, null, 0.03s);
+  color: #ffffff;
+  padding: 63px 24px;
+  background-color: rgba(33, 150, 243, 0.9);
+  height: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms ease;
+  overflow: auto;
+  .project-item:hover & {
+    transform: translateY(0);
+  }
+}
+
+.project-title {
+  @include font(18, 2, 700, 0.06);
+  color: var(--second-title-color);
+}
+
+.project-direction {
+  @include font(16, 1.88, null, 0.03);
+  margin-top: 4px;
+}

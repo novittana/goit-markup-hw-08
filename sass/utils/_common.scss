@@ -1,0 +1,56 @@
+body {
+  font-family: Roboto, sans-serif;
+  color: var(--main-text-color);
+}
+
+.container {
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
+}
+
+.section__title {
+  // @include font(36, 1.17, 700, 0.03);
+  // margin-bottom: 50px;
+  @include font(28, 1.18, 700, 0.03);
+  color: var(--second-title-color);
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  @include desktop {
+    @include font(36, 1.17, 700, 0.03);
+    margin-bottom: 50px;
+  }
+}
+
+.title {
+  @include font(14, 1.14, null, 0.03);
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--first-title-color);
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.section.no-padding-top {
+  padding-top: 0;
+}

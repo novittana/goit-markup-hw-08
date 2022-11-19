@@ -1,0 +1,21 @@
+.header-logo,
+.footer-logo,
+.studio,
+.studio-footer {
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  @include font(26, 1.19, 700, 0.03);
+}
+
+.header-logo,
+.footer-logo {
+  color: var(--first-logo-color);
+}
+
+.studio {
+  color: var(--second-logo-color);
+}
+
+.studio-footer {
+  color: var(--third-logo-color);
+}
