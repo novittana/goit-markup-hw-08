@@ -15,6 +15,13 @@
 
 .header-logo {
   display: inline-block;
+  padding: 16px 0 16px 15px;
+  @include tablet {
+    padding: 26px 0 26px 15px;
+  }
+  @include desktop {
+    padding: 24px 0 25px 0;
+  }
   padding-top: 24px;
   padding-right: 0;
   padding-bottom: 25px;
@@ -35,23 +42,39 @@
   }
 }
 
-.top-contacts-list {
-  padding-top: 32px;
-  padding-bottom: 32px;
-  @include placing(flex, null, center);
-  margin-left: auto;
-}
-
 .header-list,
 .top-contacts-list {
-  font-style: normal;
-  @include font(14, 1.14, 500, 0.02);
-  display: flex;
-  gap: 50px;
+  display: none;
+  @include tablet {
+    font-style: normal;
+    @include font(14, 1.14, 500, 0.02);
+    display: flex;
+    gap: 50px;
+  }
+}
+
+.top-contacts-list {
+  display: none;
+  @include tablet {
+    display: flex;
+    padding: 21px 15px 21px 0;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+  @include desktop {
+    flex-direction: row;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    @include placing(flex, null, center);
+  }
 }
 
 .top-contact-item {
-  @include placing(flex, center, center);
+  @include placing(flex, null, center);
+  @include desktop {
+    @include placing(flex, center, center);
+  }
 }
 
 .header .current {
@@ -59,30 +82,35 @@
   padding-bottom: 0;
   position: relative;
   transform: translateY(1px);
-  &::after {
-    content: "";
-    display: flex;
-    background-color: currentColor;
-    border-radius: 2px;
-    width: 100%;
-    height: 4px;
-    margin-top: 28px;
-    background-repeat: no-repeat;
+  @include tablet {
+    &::after {
+      content: "";
+      display: flex;
+      background-color: currentColor;
+      border-radius: 2px;
+      width: 100%;
+      height: 4px;
+      margin-top: 28px;
+      background-repeat: no-repeat;
+    }
   }
 }
 
 .top-email-link,
 .top-tel-link {
   color: var(--second-link-color);
- @include placing(flex, null, center);
-  gap: 10px;
+  @include placing(flex, null, center);
   transition-property: fill, color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 8px;
   &:hover,
   &:focus {
     color: var(--active-link-color);
     fill: var(--active-link-color);
+  }
+  @include desktop {
+    gap: 10px;
   }
 }
 
@@ -93,4 +121,83 @@
 
 .header-list {
   margin-left: 93px;
+}
+.menu-open {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  top: 10px;
+  right: 15px;
+  @include tablet {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  z-index: 1;
+  padding: 48px 40px;
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.mob-list {
+  @include font(40, 1.18, 500, 0.02);
+  text-align: left;
+}
+
+.mob-list__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mob-list__link {
+  color: #212121;
+}
+
+.mob-cont-list {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.mob-cont-list__tel {
+  @include font(34, 1.18, 500, 0.02);
+  color: #2196f3;
+}
+
+.mob-cont-list__mail {
+  @include font(24, 1.17, 500, 0.02);
+  color: #757575;
+}
+
+.menu-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background-color: transparent;
+  border: none;
+}
+
+.soc-network {
+  display: flex;
+  gap: 10px;
+  margin-top: 64px;
+  @include font(18, 1.22, 500, 0.02);
+  color: #2196f3;
+}
+
+.soc-network__item:not(:last-child) {
+  display: flex;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
 }

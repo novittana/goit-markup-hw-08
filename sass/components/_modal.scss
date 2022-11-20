@@ -22,11 +22,12 @@
   transform: translate(-50%, -50%);
   transition: transrorm 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 40px;
-  width: 450px;
-  min-height: 581px;
-
+  @include mobile {
+    min-width: 450px;
+    min-height: 581px;
+  }
   @include desktop {
-    width: 528px;
+    max-width: 528px;
     min-height: 609px;
   }
 }
@@ -153,15 +154,16 @@
 }
 
 .check-text {
-  font-size: 14px;
-  line-height: 1.71em;
-  letter-spacing: 0.03em;
   color: var(--main-text-color);
   @include placing(flex, center, center);
   position: relative;
   transition-property: color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @include font(12, 1.17, null, 0.03);
+  @include desktop {
+    @include font(14, 1.71, null, 0.03);
+  }
 }
 
 .check-text span {
