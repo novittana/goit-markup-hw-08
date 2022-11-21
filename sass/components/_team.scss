@@ -15,6 +15,15 @@
   flex-wrap: wrap;
   text-align: center;
   gap: 30px;
+  @include tablet {
+    &:first-child{
+  gap:0;
+}
+
+  }
+  @include desktop {
+  
+  }
 }
 
 .teams-item {
@@ -23,12 +32,12 @@
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-     @include tablet {
-      width: calc((100% - 30px) / 2);
-     }
-    @include desktop {
-      width: calc((100% - 3 * 30px) / 4);
-}
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  }
 }
 
 .team-members-name {

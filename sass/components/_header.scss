@@ -15,17 +15,13 @@
 
 .header-logo {
   display: inline-block;
-  padding: 16px 0 16px 15px;
+  padding: 16px 0;
   @include tablet {
     padding: 26px 0 26px 15px;
   }
   @include desktop {
     padding: 24px 0 25px 0;
   }
-  padding-top: 24px;
-  padding-right: 0;
-  padding-bottom: 25px;
-  padding-left: 0;
 }
 
 .header-link {
@@ -67,6 +63,7 @@
     padding-top: 32px;
     padding-bottom: 32px;
     @include placing(flex, null, center);
+    gap: 30px;
   }
 }
 
@@ -81,8 +78,7 @@
   color: var(--active-link-color);
   padding-bottom: 0;
   position: relative;
-  transform: translateY(1px);
-  @include tablet {
+  transform: translateY(1px); 
     &::after {
       content: "";
       display: flex;
@@ -94,7 +90,6 @@
       background-repeat: no-repeat;
     }
   }
-}
 
 .top-email-link,
 .top-tel-link {
@@ -162,7 +157,11 @@
 
 .mob-list__link {
   color: #212121;
+  &:focus {
+    color: #2196F3;
+  }
 }
+
 
 .mob-cont-list {
   margin-top: 32px;
@@ -193,8 +192,13 @@
   display: flex;
   gap: 10px;
   margin-top: 64px;
-  @include font(18, 1.22, 500, 0.02);
-  color: #2196f3;
+  flex-wrap: wrap;
+  
+  & a {
+    @include font(18, 1.22, 500, 0.02);
+    color: #2196f3;
+  }
+
 }
 
 .soc-network__item:not(:last-child) {

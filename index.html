@@ -63,47 +63,75 @@
       <div class="mobile-menu is-hidden" data-menu>
         <div class="mobile-menu__container">
           <div class="mobile-menu-top">
-             <button class="menu-close" type="button" data-menu-close>
-          <svg width="40" height="40">
-            <use href="./images/icons.svg#icon-close_40px"></use>
-          </svg>
-        </button>
-        <nav>
-          <ul class="mob-list list">
-            <li class="mob-list__item">
-              <a class="mob-list__link link current" href="./index.html"
-                >Студія</a
-              >
-            </li>
-            <li class="mob-list__item">
-              <a class="header-link link" href="./portfolio.html">Портфоліо</a>
-            </li>
-            <li class="mob-list__item">
-              <a class="mob-list__link link" href="#">Контакти</a>
-            </li>
-          </ul>
-        </nav>
+            <button class="menu-close" type="button" data-menu-close>
+              <svg width="40" height="40">
+                <use href="./images/icons.svg#icon-close_40px"></use>
+              </svg>
+            </button>
+            <nav>
+              <ul class="mob-list list">
+                <li class="mob-list__item">
+                  <a class="mob-list__link link" href="./index.html"
+                    >Студія</a
+                  >
+                </li>
+                <li class="mob-list__item">
+                  <a class="mob-list__link link" href="./portfolio.html"
+                    >Портфоліо</a
+                  >
+                </li>
+                <li class="mob-list__item">
+                  <a class="mob-list__link link" href="#">Контакти</a>
+                </li>
+              </ul>
+            </nav>
           </div>
           <div class="mobile-menu-bottom">
-              <ul class="mob-cont-list list">
-            <li class="mob-cont-list__item">
-            <a class="mob-cont-list__tel link" href="tel:+380961111111"
-              >
-              +38 096 111 11 11</a
-            >
-          </li>
-          <li class="mob-cont-list__item">
-            <a class="mob-cont-list__mail link" href="mailto:info@devstudio.com">
-              info@devstudio.com</a
-            >
-          </li>
-        </ul>
-        <ul class="soc-network list">
-          <li class="soc-network__item">Instagram</li>
-          <li class="soc-network__item">Twitter</li>
-          <li class="soc-network__item">Facebook</li>
-          <li class="soc-network__item">LinkedIn</li>
-        </ul>
+            <ul class="mob-cont-list list">
+              <li class="mob-cont-list__item">
+                <a class="mob-cont-list__tel link" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mob-cont-list__item">
+                <a
+                  class="mob-cont-list__mail link"
+                  href="mailto:info@devstudio.com"
+                >
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="soc-network list">
+              <li class="soc-network__item">
+                <a class="link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >Instagram</a>
+              </li>
+              <li class="soc-network__item">
+                <a class="link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >Twitter</a>
+              </li>
+              <li class="soc-network__item">
+                <a class="link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+               >Facebook</a>
+              </li>
+              <li class="soc-network__item">
+                <a class="link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                >LinkedIn</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
@@ -176,8 +204,15 @@
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="direction-list list">
             <li class="direction-item">
+              <picture>
+                <source srcset="
+                ./images/direction-1-desk@1x.jpg 1x,
+                ./images/direction-1-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+              </picture>
               <img
-                src="./images/box_1.jpg"
+                src="./images/direction-1-desk@1x.jpg"
                 alt="Людина працює за комп’ютером"
                 width="370"
                 height="294"
@@ -186,8 +221,15 @@
               <h3 class="direction-title title">Десктопні додатки</h3>
             </li>
             <li class="direction-item">
+               <picture>
+                <source srcset="
+                ./images/direction-2-desk@1x.jpg 1x,
+                ./images/direction-2-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+              </picture>
               <img
-                src="./images/box_2.jpg"
+                src="./images/direction-2-desk@1x.jpg"
                 alt="Людина працює за комп’ютером"
                 width="370"
                 height="294"
@@ -196,8 +238,15 @@
               <h3 class="direction-title title">Мобільні додатки</h3>
             </li>
             <li class="direction-item">
+               <picture>
+                <source srcset="
+                ./images/direction-3-desk@1x.jpg 1x,
+                ./images/direction-3-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+              </picture>
               <img
-                src="./images/box_3.jpg"
+                src="./images/direction-3-desk@1x.jpg"
                 alt="Людина обирає колір з палітри планшету"
                 width="370"
                 height="294"
@@ -213,11 +262,28 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list list">
             <li class="teams-item">
+               <picture>
+                <source srcset="
+                ./images/photo-1-desk@1x.jpg 1x,
+                ./imagesphoto-1-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+                <source srcset="
+                ./image/photo-1-tab@1x.jpg 1x,
+                ./images/photo-1-tabk@2x.jpg 2x
+                "
+                media="(min-width:768)">
+                <source srcset="
+                ./images/photo-1-mob@1x.jpg 1x,
+                ./images/photo-1-mob@2x.jpg 2x
+                "
+                media="(max-width:767)">
+              </picture>
               <img
-                src="./images/img_1.jpg"
+                src="./images/photo-1-mob@1x.jpg"
                 alt="Фото члена команди"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
                 class="card"
               />
               <div class="content-container">
@@ -276,11 +342,28 @@
               </div>
             </li>
             <li class="teams-item">
+               <picture>
+                <source srcset="
+                ./images/photo-2-desk@1x.jpg 1x,
+                ./imagesphoto-2-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+                <source srcset="
+                ./image/photo-2-tab@1x.jpg 1x,
+                ./images/photo-2-tabk@2x.jpg 2x
+                "
+                media="(min-width:768)">
+                <source srcset="
+                ./images/photo-2-mob@1x.jpg 1x,
+                ./images/photo-2-mobk@2x.jpg 2x
+                "
+                media="(max-width:767)">
+              </picture>
               <img
-                src="images/img_2.jpg"
+                src="./images/photo-2-mob@1x.jpg"
                 alt="Фото члена команди"
-                width="270"
-                height="260"
+                 width="450"
+                height="460"
                 class="card"
               />
               <div class="content-container">
@@ -339,11 +422,28 @@
               </div>
             </li>
             <li class="teams-item">
+               <picture>
+                <source srcset="
+                ./images/photo-3-desk@1x.jpg 1x,
+                ./imagesphoto-3-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+                <source srcset="
+                ./image/photo-3-tab@1x.jpg 1x,
+                ./images/photo-3-tabk@2x.jpg 2x
+                "
+                media="(min-width:768)">
+                <source srcset="
+                ./images/photo-3-mob@1x.jpg 1x,
+                ./images/photo-3-mob@2x.jpg 2x
+                "
+                media="(max-width:767)">
+              </picture>
               <img
-                src="./images/img_3.jpg"
+                src="./images/photo-3-mob@1x.jpg"
                 alt="Фото члена команди"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
                 class="card"
               />
               <div class="content-container">
@@ -402,11 +502,28 @@
               </div>
             </li>
             <li class="teams-item">
+               <picture>
+                <source srcset="
+                ./images/photo-4-desk@1x.jpg 1x,
+                ./imagesphoto-4-desk@2x.jpg 2x
+                "
+                media="(min-width:1200)">
+                <source srcset="
+                ./image/photo-4-tab@1x.jpg 1x,
+                ./images/photo-4-tabk@2x.jpg 2x
+                "
+                media="(min-width:768)">
+                <source srcset="
+                ./images/photo-4-mob@1x.jpg 1x,
+                ./images/photo-4-mob@2x.jpg 2x
+                "
+                media="(max-width:767)">
+              </picture>
               <img
-                src="./images/img_4.jpg"
+                src="./images/photo-4-mob@1x.jpg"
                 alt="Фото члена команди"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
                 class="card"
               />
               <div class="content-container">

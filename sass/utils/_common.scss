@@ -23,8 +23,6 @@ body {
 }
 
 .section__title {
-  // @include font(36, 1.17, 700, 0.03);
-  // margin-bottom: 50px;
   @include font(28, 1.18, 700, 0.03);
   color: var(--second-title-color);
   text-align: center;
@@ -40,7 +38,6 @@ body {
   @include font(14, 1.14, null, 0.03);
   text-align: center;
   text-transform: uppercase;
-
   color: var(--first-title-color);
 }
 

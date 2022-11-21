@@ -10,10 +10,10 @@
   height: 92px;
   width: calc((100% - 30px) / 2);
   @include tablet {
-    width: calc((100% - 2 * 30px) / 3);
+   flex-basis: calc((100% - 2 * 30px) / 3);
   }
   @include desktop {
-    width: calc((100% - 5 * 30px) / 6);
+   flex-basis: calc((100% - 5 * 30px) / 6);
   }
 }
 
