@@ -1,6 +1,11 @@
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include desktop {
+    align-items: baseline;
+  }
 }
 
 .footer {
@@ -14,7 +19,8 @@
 }
 
 .address-conteiner {
-  width: 231px;
+  min-width: 232px;
+  // width: 231px;
 }
 
 .footer-item {
@@ -22,7 +28,10 @@
   display: block;
   &:not(:last-child) {
     display: block;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
+    @include desktop {
+      margin-bottom: 9px;
+    }
   }
 }
 
@@ -46,26 +55,36 @@
   &:focus {
     color: var(--active-link-color);
   }
+  display: flex;
+  justify-content: center;
 }
 
 .footer-logo {
   display: block;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-soc-net-container {
-  margin-left: 70px;
+  // margin-left: 70px;
   max-width: 206px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footer-title {
   @include font(14, 1.14, null, 0.03);
   text-transform: uppercase;
-
   color: #ffffff;
-
-  @include placing(flex, null, baseline);
+  // @include placing(flex, null, baseline);
   margin-bottom: 20px;
+
+  text-align: center;
+  justify-content: center;
 }
 
 .soc-network-item .footer-icon-link {
@@ -88,7 +107,10 @@
 }
 
 .subscribe {
-  margin-left: 93px;
+  flex-wrap: wrap;
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 
 .subscribe-button {
@@ -104,6 +126,7 @@
 
   background: var(--active-btn-background-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
 }
 
 .icon-send {
@@ -112,8 +135,8 @@
 }
 
 .footer-mail-input {
-    @include font(16, 1.25, null, 0.03);
-    @include placing(flex, null, center);
+  @include font(16, 1.25, null, 0.03);
+  @include placing(flex, null, center);
   min-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -125,6 +148,9 @@
 }
 
 .subscribe-form {
+  // display: flex;
+  // gap: 12px;
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
 }

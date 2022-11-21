@@ -4,7 +4,10 @@
 .studio-footer {
   font-family: "Raleway", sans-serif;
   text-decoration: none;
-  @include font(26, 1.19, 700, 0.03);
+  @include font(24, calc(28 / 24), 700, 0.03);
+  @include desktop {
+    @include font(26, 1.19, 700, 0.03);
+  }
 }
 
 .header-logo,
