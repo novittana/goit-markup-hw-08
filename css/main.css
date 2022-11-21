@@ -709,15 +709,16 @@ body {
 
 .footer .container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .footer .container {
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: baseline;
   }
 }
-
 .footer {
   background-color: var(--dark-background-color);
   padding-top: 60px;
@@ -730,6 +731,11 @@ body {
 
 .address-conteiner {
   min-width: 232px;
+}
+@media screen and (min-width: 768px) {
+  .address-conteiner {
+    margin-left: 76px;
+  }
 }
 
 .footer-item {
@@ -784,11 +790,15 @@ body {
 
 .footer-soc-net-container {
   max-width: 206px;
-  margin-top: 60px;
-  margin-bottom: 60px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 60px auto 0;
+}
+@media screen and (min-width: 768px) {
+  .footer-soc-net-container {
+    margin-left: 165px;
+  }
 }
 
 .footer-title {
@@ -822,6 +832,13 @@ body {
 
 .subscribe {
   flex-wrap: wrap;
+  margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .subscribe {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
@@ -846,6 +863,12 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .subscribe-button {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 .icon-send {
   fill: #ffffff;
@@ -858,7 +881,6 @@ body {
   letter-spacing: 0.03em;
   display: flex;
   align-items: center;
-  min-width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
@@ -866,12 +888,29 @@ body {
   padding-left: 16px;
   background-color: transparent;
   outline: none;
+  min-width: 450px;
+}
+@media screen and (min-width: 1200px) {
+  .footer-mail-input {
+    min-width: 358px;
+  }
 }
 
 .subscribe-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: flex;
+    gap: 12px;
+  }
 }
 
 .backdrop {
