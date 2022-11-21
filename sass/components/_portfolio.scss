@@ -1,6 +1,10 @@
 .projects-filter {
-  @include placing(flex, center, null);
-  margin-bottom: 50px;
+  // @include placing(flex, center, null);
+  // margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 15px;
 }
 
 .filter-btn {
@@ -34,10 +38,16 @@
 }
 
 .project-item {
-  width: calc((100% - 30px * 2) / 3);
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@include tablet {
+  width: calc((100% - 30px) / 2);
+}
+@include desktop{
+width: calc((100% - 2*  30px) / 3);
+}  
 }
 
 .project-container {
@@ -50,6 +60,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 40px;
+  @include tablet {
+    margin-top: 30px;
+  }
 }
 
 .project-item .hover-img-text {

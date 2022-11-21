@@ -33,6 +33,7 @@
 .hero__title {
   // @include font(26, 1.62, 900, 0.06);
   // max-width: 696px;
+   @include font(26, 1.62, 900, 0.06);
   text-transform: uppercase;
   color: var(--first-title-color);
   margin-bottom: 30px;

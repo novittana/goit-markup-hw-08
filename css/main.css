@@ -193,12 +193,21 @@ body {
   .header-list,
 .top-contacts-list {
     font-style: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.14;
     font-weight: 500;
     letter-spacing: 0.02em;
     display: flex;
     gap: 50px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-list,
+.top-contacts-list {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -466,6 +475,10 @@ body {
 }
 
 .hero__title {
+  font-size: 26px;
+  line-height: 1.62;
+  font-weight: 900;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--first-title-color);
   margin-bottom: 30px;
@@ -782,6 +795,7 @@ body {
   .address-conteiner {
     min-width: 231px;
     margin-left: 0;
+    margin-top: 0;
   }
 }
 
@@ -827,12 +841,24 @@ body {
 .footer-link-tel:focus {
   color: var(--active-link-color);
 }
+@media screen and (min-width: 1200px) {
+  .footer-link,
+.footer-link-mail,
+.footer-link-tel {
+    justify-content: flex-start;
+  }
+}
 
 .footer-logo {
   display: block;
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    justify-content: flex-start;
+  }
 }
 
 .footer-soc-net-container {
@@ -845,11 +871,11 @@ body {
 @media screen and (min-width: 768px) {
   .footer-soc-net-container {
     margin-left: 165px;
+    margin-top: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer-soc-net-container {
-    margin-top: 0;
     margin-left: 70px;
     margin-right: 0;
   }
@@ -864,6 +890,11 @@ body {
   margin-bottom: 20px;
   text-align: center;
   justify-content: center;
+}
+@media screen and (min-width: 1200px) {
+  .footer-title {
+    text-align: start;
+  }
 }
 
 .soc-network-item .footer-icon-link {
@@ -900,10 +931,9 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .subscribe {
-    margin-left: 70px;
+    margin-left: 93px;
     margin-top: 0;
     margin-right: 0;
-    align-items: baseline;
   }
 }
 
@@ -929,6 +959,7 @@ body {
 @media screen and (min-width: 1200px) {
   .subscribe-button {
     margin: 0;
+    margin-left: 12px;
   }
 }
 
@@ -940,7 +971,6 @@ body {
 @media screen and (min-width: 1200px) {
   .subscribe-form {
     display: flex;
-    gap: 12px;
   }
 }
 
@@ -1201,8 +1231,9 @@ input-check:focus + .check-text span {
 
 .projects-filter {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 15px;
 }
 
 .filter-btn {
@@ -1235,10 +1266,20 @@ input-check:focus + .check-text span {
 }
 
 .project-item {
-  width: calc((100% - 60px) / 3);
+  width: 100%;
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .project-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .project-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .project-container {
@@ -1251,6 +1292,12 @@ input-check:focus + .check-text span {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 768px) {
+  .projects-list {
+    margin-top: 30px;
+  }
 }
 
 .project-item .hover-img-text {

@@ -43,9 +43,12 @@
   display: none;
   @include tablet {
     font-style: normal;
-    @include font(14, 1.14, 500, 0.02);
+    @include font(12, 1.14, 500, 0.02);
     display: flex;
     gap: 50px;
+  }
+  @include desktop {
+    @include font(14, 1.14, 500, 0.02);
   }
 }
 
